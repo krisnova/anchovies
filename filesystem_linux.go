@@ -1,5 +1,3 @@
-//go:build linux
-
 // Copyright © 2021 Kris Nóva <kris@nivenly.com>
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
