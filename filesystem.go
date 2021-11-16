@@ -33,7 +33,7 @@ func Directory() (string, error) {
 		// ignore errors here - just try to create it
 		err := os.Mkdir(d, fileMode)
 		if err != nil {
-			logger.Critical(err.Error())
+			logger.Debug(err.Error())
 		}
 		return d, nil
 	}
