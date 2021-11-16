@@ -45,6 +45,16 @@ func TestWriteSimpleRecord(t *testing.T) {
 	}
 }
 
+func TestWriteSimpleRecordMissingID(t *testing.T) {
+	m := &TestRecord{}
+	err := Write(m)
+	if err == nil {
+		t.Errorf("possible to write record with missing ID")
+	} else {
+		logger.Debug(err.Error())
+	}
+}
+
 func TestWriteReadSimpleRecord(t *testing.T) {
 	id := U("anotherkey")
 	m := &TestRecord{
